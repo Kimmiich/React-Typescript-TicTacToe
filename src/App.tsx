@@ -9,9 +9,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>TicTacToe</h1>
       {game.gameStatus === 'started' && (
-        <Game board={game.board} handleClick={game.handleClick} />
+        <Game
+          board={game.board}
+          handleClick={game.handleClick}
+          players={game.players}
+        />
       )}
       {game.gameStatus === 'created' && (
         <Start handleStart={game.handleStart} />

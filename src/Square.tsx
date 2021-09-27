@@ -12,6 +12,7 @@ const Square = (props: Props) => {
       width: '100px',
       height: '100px',
       fontSize: '46px',
+      cursor: 'pointer',
     },
   };
   return (

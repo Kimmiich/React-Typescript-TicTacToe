@@ -5,6 +5,7 @@ interface ReturnValue {
   board: string[];
   gameStatus: string;
   winner: string | null;
+  players: string[];
   handleClick: (inddex: number) => void;
   handleRestart: () => void;
   handleStart: (players: string[]) => void;
@@ -79,5 +80,13 @@ export default (): ReturnValue => {
     setGameStatus('created');
   };
 
-  return { board, gameStatus, winner, handleClick, handleRestart, handleStart };
+  return {
+    board,
+    gameStatus,
+    winner,
+    players,
+    handleClick,
+    handleRestart,
+    handleStart,
+  };
 };

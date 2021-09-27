@@ -22,7 +22,7 @@ function Start(props: Props) {
 
   return (
     <div>
-      <h1>Start</h1>
+      <h1>Welcome to the Tic tac toe game!</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
