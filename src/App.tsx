@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Start from './Start';
+import Game from './Game';
+import Finished from './Finished';
+import useTicTacToe from './useTicTacToe';
 
 function App() {
+  const game = useTicTacToe();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>TicTacToe</h1>
+      {game.gameStatus === 'started' && (
+        <Game board={game.board} handleClick={game.handleClick} />
+      )}
+      {game.gameStatus === 'created' && (
+        <Start handleStart={game.handleStart} />
+      )}
+      {game.gameStatus === 'finished' && (
+        <Finished handleRestart={game.handleRestart} name={game.winner} />
+      )}
     </div>
   );
 }
