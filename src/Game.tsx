@@ -25,6 +25,7 @@ function Game(props: Props) {
         <h1>
           {players[0]}(X) VS {players[1]}(O)
         </h1>
+        <h2>X starts!</h2>
       </header>
       <div style={styles.board}>
         {board.map((value, index) => {
