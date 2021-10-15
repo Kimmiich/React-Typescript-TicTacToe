@@ -6,7 +6,7 @@ interface ReturnValue {
   gameStatus: string;
   winner: string | null;
   players: string[];
-  handleClick: (inddex: number) => void;
+  handleClick: (index: number) => void;
   handleRestart: () => void;
   handleStart: (players: string[]) => void;
 }
